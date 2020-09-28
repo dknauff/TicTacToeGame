@@ -36,7 +36,15 @@ namespace TicTacToe
 
             if (gameStatus.Equals(1))
             {
+                Console.Clear();
                 Console.WriteLine($"{currentPlayer} won!!!");
+                Console.ReadKey();
+            }
+
+            if (gameStatus.Equals(2))
+            {
+                Console.Clear();
+                Console.WriteLine("It is a draw...");
                 Console.ReadKey();
             }
 
@@ -52,13 +60,65 @@ namespace TicTacToe
 
         private static int CheckWinner(char[] spaces)
         {
-            if (spaces[0].Equals(spaces[1]) && spaces[1].Equals(spaces[2]))
+            if (IsGameDraw(spaces))
+            {
+                return 2;
+            }
+
+            if (IsGameWinner(spaces))
             {
                 return 1;
             }
+
             return 0;
         }
 
+        private static bool IsGameDraw(char[] spaces)
+        {
+            return spaces[0] != '1' && spaces[1] != '2' && spaces[2] != '3' && spaces[3] != '4' && spaces[4] != '5' && spaces[5] != '6' && spaces[6] != '7' && spaces[7] != '8' && spaces[8] != '9';
+        }
+
+        private static bool IsGameWinner(char[] spaces)
+        {
+            if (AreSpacesTheSame(spaces, 0, 1, 2))
+            {
+                return true;
+            }
+            if (AreSpacesTheSame(spaces, 3, 4, 5))
+            {
+                return true;
+            }
+            if (AreSpacesTheSame(spaces, 6, 7, 8))
+            {
+                return true;
+            }
+            if (AreSpacesTheSame(spaces, 0, 3, 6))
+            {
+                return true;
+            }
+            if (AreSpacesTheSame(spaces, 1, 4, 7))
+            {
+                return true;
+            }
+            if (AreSpacesTheSame(spaces, 2, 5, 8))
+            {
+                return true;
+            }
+            if (AreSpacesTheSame(spaces, 0, 4, 8))
+            {
+                return true;
+            }
+            if (AreSpacesTheSame(spaces, 2, 4, 6))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private static bool AreSpacesTheSame(char[] testSpaces, int pos1, int pos2, int pos3)
+        {
+            return testSpaces[pos1].Equals(testSpaces[pos2]) && testSpaces[pos2].Equals(testSpaces[pos3]);
+        }
         private static void GameLogic(char[] spaces, int currentPlayer)
         {
             bool notAllowedMove = true;
