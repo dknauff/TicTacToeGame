@@ -17,13 +17,13 @@ namespace ClassSet
 
             Console.WriteLine($"Player {PlayerName} choose your spot 1-9\n");
         }
-        public void PrintingBoard()
+        public void PrintingBoard(char[] spaces)
         {
-            Console.WriteLine("  1  |  2  |  3  ");
+            Console.WriteLine($"  {spaces[0]}  |  {spaces[1]}  |  {spaces[2]}  ");
             Console.WriteLine("-----------------");
-            Console.WriteLine("  4  |  5  |  6  ");
+            Console.WriteLine($"  {spaces[3]}  |  {spaces[4]}  |  {spaces[5]}  ");
             Console.WriteLine("-----------------");
-            Console.WriteLine("  7  |  8  |  9  ");
+            Console.WriteLine($"  {spaces[6]}  |  {spaces[7]}  |  {spaces[8]}  ");
         }
     }
 }

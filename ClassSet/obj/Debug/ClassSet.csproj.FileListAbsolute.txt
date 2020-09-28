@@ -3,3 +3,4 @@ C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\ClassSet\bin\Debug\ClassSe
 C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\ClassSet\obj\Debug\ClassSet.csproj.CoreCompileInputs.cache
 C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\ClassSet\obj\Debug\ClassSet.dll
 C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\ClassSet\obj\Debug\ClassSet.pdb
+C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\ClassSet\obj\Debug\ClassSet.csprojAssemblyReference.cache
