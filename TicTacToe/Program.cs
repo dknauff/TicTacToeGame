@@ -11,25 +11,26 @@ namespace TicTacToe
     {
         static void Main(string[] args)
         {
-        PrintIntro intro = new PrintIntro();
-            int gameStatus = 0;
+            PrintIntro intro = new PrintIntro();
+            GameConstraints gameConstraints = new GameConstraints();
+            int gameStatus;
             int currentPlayer = -1;
             char[] spaces = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
             do
             {
                 Console.Clear();
-                currentPlayer = GetNextPlayer(currentPlayer);
+                currentPlayer = gameConstraints.GetNextPlayer(currentPlayer);
 
-        //introduction and how to play instructions
-            intro.GreetingAndInstructions(currentPlayer);
+                //introduction and how to play instructions
+                intro.GreetingAndInstructions(currentPlayer);
 
-            //print board
-            intro.PrintingBoard(spaces);
+                //print board
+                intro.PrintingBoard(spaces);
 
                 //game logic
                 GameLogic(spaces, currentPlayer);
-
+                //checking for winner
                 gameStatus = CheckWinner(spaces);
             }
             while (gameStatus.Equals(0));
@@ -37,25 +38,24 @@ namespace TicTacToe
             if (gameStatus.Equals(1))
             {
                 Console.Clear();
-                Console.WriteLine($"{currentPlayer} won!!!");
+                Console.SetWindowSize(160, 3);
+                Console.BackgroundColor = ConsoleColor.DarkYellow;
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                Console.WriteLine($"I, player {currentPlayer}, hearby accept this honor as supreme champion of Tic Tac Toe!  Clearly, you were no match for me, and probably shouldn't even try to beat me again.  But, I will humor it if you really, really, REALLY want to lose again.");
                 Console.ReadKey();
             }
 
             if (gameStatus.Equals(2))
             {
                 Console.Clear();
+                Console.BackgroundColor = ConsoleColor.DarkBlue;
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("It is a draw...");
                 Console.ReadKey();
             }
-
-            static int GetNextPlayer(int player)
-            {
-                if (player.Equals(1))
-                {
-                    return 2;
-                }
-                return 1;
-            }
+      
+            gameConstraints.GetNextPlayer(1);
         }
 
         private static int CheckWinner(char[] spaces)
@@ -134,7 +134,7 @@ namespace TicTacToe
 
                     char currentSpace = spaces[gameSpaces - 1];
 
-                    if (currentSpace.Equals('X') || currentSpace.Equals('0'))
+                    if (currentSpace.Equals('X') || currentSpace.Equals('O'))
                     {
                         Console.WriteLine("Spot's taken bud");
                     }
