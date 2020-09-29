@@ -84,6 +84,7 @@ namespace TicTacToe
             if (gameStatus.Equals(2))
             {
                 Console.Clear();
+                Console.SetWindowSize(16, 2);
                 Console.BackgroundColor = ConsoleColor.DarkBlue;
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("It is a draw...");
