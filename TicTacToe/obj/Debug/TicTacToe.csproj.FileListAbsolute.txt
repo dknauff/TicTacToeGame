@@ -5,6 +5,3 @@ C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\TicTacToe\obj\Debug\TicTac
 C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
 C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
 C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
-C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\TicTacToe\bin\Debug\ClassSet.dll
-C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\TicTacToe\bin\Debug\ClassSet.pdb
-C:\Users\Danny.LAPTOP-SJJ2KHLN\Desktop\1150\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.CopyComplete
